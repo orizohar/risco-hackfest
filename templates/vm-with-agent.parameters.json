@@ -1,0 +1,33 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountNamePrefix": {
+      "value": "someprefix"
+    },
+    "adminUserName": {
+      "value": "myadmin"
+    },
+    "adminPassword": {
+      "value": "A=a1234567890"
+    },
+    "dnsLabelPrefix": {
+      "value": "somelabel"
+    },
+    "vmSize": {
+      "value": "Standard_DS2_V2"
+    },
+    "puppet_master_server_url": {
+      "value": "puppet.master.com"
+    },
+    "vnetGroup" : {
+      "value": "vnet-resourcegroup"
+    },
+    "vnetName" : {
+      "value": "vnet-name"
+    },
+    "subnetName" : {
+      "value": "subnet-name"
+    }
+  }
+}

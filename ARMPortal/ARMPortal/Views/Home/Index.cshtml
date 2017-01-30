@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ARM Deployment Portal</h1>
+    <p class="lead">Description</p>
+</div>
+<div class="jumbotron">
+    <div class="row">
+        <h2>Template Selection</h2>
+        <p>
+            Description
+        </p>
+        <div class="col-md-12">
+            <form class="form-group" role="form" id="newTaskForm" data-bind="submit: startTask">
+                <div class="form-group">
+                    <label for="environmentName" class="col-sm-2">Environment Name:</label>
+                    <div class="col-sm-10" style="margin-bottom: 10px">
+                        <input type="text" class="form-control" id="environmentName" placeholder="Environment Name" data-bind="value:model.environmentName" required  />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="availableSubscriptions" class="col-sm-2">Azure Subscription:</label>
+                    <div class="col-sm-10" style="margin-bottom: 10px">
+                        <select id="availableSubscriptions" class="form-control" required data-bind="options: model.availableSubscriptions, value: model.selectedSubscription"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="availableRegions" class="col-sm-2">Azure Region:</label>
+                    <div class="col-sm-10" style="margin-bottom: 10px">
+                        <select id="availableRegions" class="form-control" required data-bind="options: model.availableRegions, value: model.selectedRegion"></select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary btn-lg">Deploy &raquo;</button>
+                    </div>
+                </div>
+            </form>
+            @section scripts{
+                <script>
+                    $(document).ready(function () {
+                        var controller = new TaskController();
+                        ko.applyBindings(controller, $('#newTaskForm').get(0));
+                    });
+                </script>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="row">
+        <h1>Popular Azure Templates</h1>
+        <div class="col-md-4">
+            <h2>Template 1</h2>
+            <p>
+                Description
+            </p>
+            <p>@Html.ActionLink("Deploy >>", "", "Tasks", new { area = "" }, new { @class = "btn btn-primary btn" })</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Template 2</h2>
+            <p>
+                Description
+            </p>
+            <p>@Html.ActionLink("Deploy >>", "Deploy", "Deployment", new { area = "" }, new { @class = "btn btn-primary btn" })</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Template 3</h2>
+            <p>
+                Description
+            </p>
+            <p>@Html.ActionLink("Deploy >>", "Deploy", "Deployment", new { area = "" }, new { @class = "btn btn-primary btn" })</p>
+        </div>
+    </div>
+</div>

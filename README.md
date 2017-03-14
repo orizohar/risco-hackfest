@@ -32,7 +32,7 @@ To better understand how this project implements user authentication and makes u
 
 ## License ##
 
-This project is licensed under MIT and Apache-2.0.
+This project is licensed under MIT license.
 
 ## Appreciation ##
 

@@ -1,5 +1,7 @@
 # Web Portal for Automating Azure environment deployments
-This repository includes reference code created by Microsoft, RISCO and U-BTech as part of a hackfest centered around DevOps.
+This repository includes reference code created by Microsoft, RISCO and U-BTech as part of a hackfest centered around DevOps. Please read the detailed technical case study to better understand the context and usage of this application:
+
+[*Automating cloud deployments using Azure Resource Manager and Puppet with RISCO*](https://microsoft.github.io/techcasestudies/devops/2017/03/14/risco.html)
 
 The code in this repository is meant to be used as a reference to showcase how to automate Azure environment deployments using a web application. 
 
@@ -27,4 +29,12 @@ To better understand how this project implements user authentication and makes u
 - [Creating Active Directory application and service principal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 - [ASP.NET Web App Sign In & Sign Out with Azure AD](https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-devquickstarts-webapp-dotnet).
 - [Deploy an Azure Virtual Machine using C# and a Resource Manager template](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-csharp-template?toc=/azure/virtual-machines/windows/toc.json).
+
+## License ##
+
+This project is licensed under MIT and Apache-2.0.
+
+## Appreciation ##
+
+Special thanks to Elad Hayun (U-BTech) who wrote most of the code published here.
 
